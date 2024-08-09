@@ -1,7 +1,9 @@
 name: Python CI Pipeline
 
 #on: [push, pull_request]
-on: workflow_dispatch
+on:
+  repository_dispatch:
+    types: [my-event] #workflow_dispatch
 
 jobs:
   build:
